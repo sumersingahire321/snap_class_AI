@@ -12,7 +12,7 @@ setuptools<70.0.0
 supabase
 bcrypt
 
-#Web Dev
+#Web Dev.
 segno 
 pillow
 streamlit

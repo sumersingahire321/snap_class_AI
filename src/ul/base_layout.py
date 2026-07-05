@@ -32,12 +32,12 @@ def style_base_layout():
         @import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         
-        /*Hide Streamlit menu, header and footer*/
+        /*Hide Streamlit menu, header and footer
             #MainMenu,
             header,
             footer {
                 visibility: hidden;
-            }
+            }*/
 
         /* Reduce top padding */
             .block-container {
