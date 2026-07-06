@@ -14,7 +14,7 @@ def style_backdround_home():
                 
                 """,unsafe_allow_html=True)
     
-'''def style_background_dashboad():
+def style_background_dashboad():
     st.markdown("""
         <style>
             .stApp{
@@ -22,7 +22,7 @@ def style_backdround_home():
                 }
         </style>
                 
-                """,unsafe_allow_html=True)'''
+                """,unsafe_allow_html=True)
     
 
 def style_base_layout():
