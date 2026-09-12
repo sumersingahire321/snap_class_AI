@@ -16,3 +16,7 @@ bcrypt
 segno 
 pillow
 streamlit
+
+#vioce lib 
+librosa
+resemblyzer
