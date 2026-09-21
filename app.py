@@ -3,9 +3,13 @@ import streamlit as st
 from src.screen.home_screen import home_screen
 from src.screen.student_screen import student_screen
 from src.screen.teacher_screen import teacher_screen
-
+from src.components.auto_enroll_dialog import  auto_enroll_dialog
 
 def main():
+    st.set_page_config(
+        page_title="SnapClass - Making Attendance faster using AI",
+        page_icon="https://cdn-icons-png.flaticon.com/512/2940/2940653.png"
+    )
     if "login_type" not in st.session_state:
         st.session_state["login_type"]= None
 
@@ -17,6 +21,15 @@ def main():
             student_screen()
         case None :
             home_screen()
+
+    joint_code = st.query_params.get('join_code')
+    if joint_code:
+        if st.session_state.login_type != 'student':
+            st.session_state.login_type = 'student'
+            st.rerun()
+
+        if st.session_state.get('is_logged_in') and st.session_state.get('user_role') == 'student':
+            auto_enroll_dialog(joint_code)
 
 
 main()   

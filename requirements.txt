@@ -1,3 +1,5 @@
+streamlit
+
 #Write the code logic 
 numpy
 pandas
@@ -15,7 +17,7 @@ bcrypt
 #Web Dev.
 segno 
 pillow
-streamlit
+
 
 #vioce lib 
 librosa

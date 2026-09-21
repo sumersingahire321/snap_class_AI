@@ -4,10 +4,10 @@ def style_backdround_home():
     st.markdown("""
         <style>
             .stApp{
-                background: linear-gradient(to bottom, #33cc33 0%, #ffffff 80%) !important;
+                background: linear-gradient(to bottom, #EEE2EB  0%, #EEE2EB  80%) !important;
                 }
             .stApp div[data-testid="stColumn"]{
-                background-color:#E0E3FF !important;
+                background:#EBF4FA !important;
                 padding:1.3rem !important;
                 border-radius:3.5rem !important;}
         </style>
@@ -18,7 +18,7 @@ def style_background_dashboad():
     st.markdown("""
         <style>
             .stApp{
-                background : #ffffb3 !important;
+                background: #EEE2EB !important;
                 }
         </style>
                 
@@ -61,7 +61,7 @@ def style_base_layout():
                     }
              button{
                     border-radius:1.5rem !important;
-                    background: #EE82EE !important;
+                    background-color: #EE82EE !important;
                     color: white !important;
                     padding:10px 20px !important;
                     border: none !important;
@@ -69,7 +69,7 @@ def style_base_layout():
                     }
             button[kind="secomdary"]{
                     border-radius:1.5rem !important;
-                    background: #FF69B4 !important;
+                    background-color: #FF69B4 !important;
                     color: white !important;
                     padding:10px 20px !important;
                     border: none !important;
@@ -77,7 +77,7 @@ def style_base_layout():
                     }
              button[kind="tertiary"]{
                     border-radius:1.5rem !important;
-                    background: #7CFC00 !important;
+                    background-color: #7CFC00 !important;
                     color: white !important;
                     padding:10px 20px !important;
                     border: none !important;

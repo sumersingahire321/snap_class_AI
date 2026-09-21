@@ -8,9 +8,9 @@ from src.database.db import get_all_students
 
 @st.cache_resource
 def load_dlit_models():
-    detector = dlib.get_frontal_face_detectory()
+    detector = dlib.get_frontal_face_detector()
 
-    sp = dlib.shape_predictior(
+    sp = dlib.shape_predictor(
         face_recognition_models.pose_predictor_model_location()
     )
 
@@ -18,7 +18,7 @@ def load_dlit_models():
         face_recognition_models.face_recognition_model_location()
     )
 
-    return detector ,sp ,facerec
+    return detector, sp, facerec
 
 def get_face_embedding(image_np):
     detector , sp, facerec = load_dlit_models()
@@ -26,7 +26,7 @@ def get_face_embedding(image_np):
     encodings =[]
     for face in faces:
         shape = sp(image_np,face)
-        face_descriptor = facerec.computer_face_descriptor(image_np,shape,1)
+        face_descriptor = facerec.compute_face_descriptor(image_np, shape, 1)
         encodings.append(np.array(face_descriptor))
         return encodings
     
@@ -85,6 +85,6 @@ def predict_attendance(class_image_np):
 
         if best_match_score <= resemblance_threshold:
             detected_student[predicted_id]=True
-        return detected_student,all_students,len(encoding)
+        return detected_student,all_students,len(encodings)
 
 
